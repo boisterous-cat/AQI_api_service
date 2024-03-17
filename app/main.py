@@ -117,7 +117,7 @@ def get_csv(file: UploadFile) -> Response:
 @app.post("/get_data", summary='Get predictions for location')
 def predict_by_coordinates(location: UserLocation):
     """
-    По наименованию страны и города получаем координаты (сервис geocode) и
+    По наименованию страны (на английском) и города (на английском) получаем координаты (сервис geocode) и
     при помощи открытого апи получаем показатели на текущий момент. Затем отправляем их в модель.
     Args:
         location: страна и город указанные пользователем
